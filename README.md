@@ -1,4 +1,4 @@
-🛍️ E-Commerce – Next.js & React
+# 🛍️ E-Commerce – Next.js & React
 
 Aplicação de e-commerce desenvolvida com Next.js e React, planejada para ser escalável, bem organizada e de fácil manutenção.
 O projeto aplica Composition Patterns e Princípios SOLID, além de preparar a base para uma API própria.
@@ -6,7 +6,7 @@ O projeto aplica Composition Patterns e Princípios SOLID, além de preparar a b
 <img width="1920" height="2656" alt="screencapture-localhost-3000-2025-09-29-18_29_48" src="https://github.com/user-attachments/assets/49b29a55-0895-4335-b86e-1f66df6647df" />
 
 
-✨ Funcionalidades
+# ✨ Funcionalidades
 
 Autenticação
 
@@ -17,7 +17,7 @@ Integração com provedores externos (Google, GitHub)
 Lógica desacoplada para permitir troca futura de serviço de autenticação
 
 
-Produtos
+# Produtos
 
 Página inicial com produtos em destaque
 
@@ -28,7 +28,7 @@ Página de detalhes com informações, imagens e avaliações
 Componente ProductSkeleton para placeholders durante carregamento
 
 
-Interface e UX
+# Interface e UX
 
 Componentes reutilizáveis (CustomButton, CustomInput, PageWrapper, etc.)
 
@@ -43,12 +43,9 @@ Arquivos mocks com categorias, produtos e reviews
 
 Facilita desenvolvimento e testes antes da API real
 
-
-
-
 ---
 
-🏗️ Estrutura do Projeto
+# 🏗️ Estrutura do Projeto
 
 src/
   components/
@@ -98,7 +95,7 @@ src/
 
 ---
 
-🔑 Destaques de Engenharia
+# 🔑 Destaques de Engenharia
 
 Composition Patterns
 
@@ -107,7 +104,7 @@ Páginas formadas pela composição de pequenos componentes independentes.
 PageWrapper é um bom exemplo: Root, Header e Content se combinam para formar o layout.
 
 
-Princípios SOLID
+# Princípios SOLID
 
 Single Responsibility: cada componente tem uma única função clara.
 
@@ -123,18 +120,16 @@ Serviços (ex.: requestApi.ts) não dependem de implementação fixa, podendo tr
 
 
 
-Independência de Bibliotecas
+# Independência de Bibliotecas
 
 Lógica de requisição isolada.
 
 Fácil troca de bibliotecas de UI ou de requisições.
 
 
-
-
 ---
 
-🛠️ Tecnologias
+# 🛠️ Tecnologias
 
 Next.js – renderização híbrida e roteamento automático
 
