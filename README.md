@@ -1,40 +1,157 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+🛍️ E-Commerce – Next.js & React
 
-## Getting Started
+Aplicação de e-commerce desenvolvida com Next.js e React, planejada para ser escalável, bem organizada e de fácil manutenção.
+O projeto aplica Composition Patterns e Princípios SOLID, além de preparar a base para uma API própria.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✨ Funcionalidades
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Autenticação
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Telas de Login e Cadastro (Register)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Integração com provedores externos (Google, GitHub)
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Lógica desacoplada para permitir troca futura de serviço de autenticação
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Produtos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Página inicial com produtos em destaque
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Lista por categorias e busca com filtros
 
-## Deploy on Vercel
+Página de detalhes com informações, imagens e avaliações
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Componente ProductSkeleton para placeholders durante carregamento
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+
+Interface e UX
+
+Componentes reutilizáveis (CustomButton, CustomInput, PageWrapper, etc.)
+
+Layout responsivo com Tailwind CSS
+
+Uso de utils (cn.ts) para mesclar classes de forma eficiente
+
+
+Dados Mockados (fase atual)
+
+Arquivos mocks com categorias, produtos e reviews
+
+Facilita desenvolvimento e testes antes da API real
+
+
+
+
+---
+
+🏗️ Estrutura do Projeto
+
+src/
+  components/
+    AsideFilters/
+    BannerSection/
+    CategorySection/
+    CustomButton/
+    CustomInput/
+    Header/
+    LoginForm/
+    NewsletterSection/
+    PageWrapper/
+      PageWrapperRoot.tsx
+      PageWrapperHeader.tsx
+      PageWrapperContent.tsx
+    ProductCard/
+    ProductDetailsCard/
+    ProductImages/
+    ProductInfo/
+    ProductReviews/
+    ProductsSection/
+    RegisterForm/
+    Skeletons/
+      ProductSkeleton.tsx
+    StarsRating/
+    ui/         # Elementos genéricos, ex.: slider, tabs
+
+  helpers/      # Funções auxiliares: formatCurrency, requestApi, etc.
+  interfaces/   # Tipagens: Category, Product, ProductDetails, Review
+  mocks/        # Dados simulados: categories.ts, productsDetails.ts, productsReviews.ts
+  lib/          # Utilidades internas
+    utils/
+      cn.ts     # Função cn() para merge de classes (clsx + tailwind-merge)
+
+  pages/
+    api/        # Endpoints Next.js (serão integrados à API real)
+    login/
+    products/
+    register/
+    index.tsx   # Página inicial
+    _app.tsx
+    _document.tsx
+
+  services/     # Serviços (ex.: api.ts para chamadas)
+  styles/       # Estilos globais
+
+
+---
+
+🔑 Destaques de Engenharia
+
+Composition Patterns
+
+Páginas formadas pela composição de pequenos componentes independentes.
+
+PageWrapper é um bom exemplo: Root, Header e Content se combinam para formar o layout.
+
+
+Princípios SOLID
+
+Single Responsibility: cada componente tem uma única função clara.
+
+Open/Closed: aberto para extensão, fechado para modificação.
+
+Liskov Substitution: abstrações permitem substituição sem quebrar comportamento.
+
+Interface Segregation: interfaces simples e específicas (Category.ts, Product.ts, etc.).
+
+Dependency Inversion:
+
+Serviços (ex.: requestApi.ts) não dependem de implementação fixa, podendo trocar fetch por axios sem alterar a arquitetura.
+
+
+
+Independência de Bibliotecas
+
+Lógica de requisição isolada.
+
+Fácil troca de bibliotecas de UI ou de requisições.
+
+
+
+
+---
+
+🛠️ Tecnologias
+
+Next.js – renderização híbrida e roteamento automático
+
+React – criação de interfaces
+
+TypeScript – tipagem estática
+
+Tailwind CSS – estilização ágil e responsiva
+
+
+
+---
+
+
+
+
+
+---
+
+🌐 Projeto Open Source
