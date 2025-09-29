@@ -3,7 +3,11 @@
 Aplicação de e-commerce desenvolvida com Next.js e React, planejada para ser escalável, bem organizada e de fácil manutenção.
 O projeto aplica Composition Patterns e Princípios SOLID, além de preparar a base para uma API própria.
 
+
+
 <img width="1920" height="2656" alt="screencapture-localhost-3000-2025-09-29-18_29_48" src="https://github.com/user-attachments/assets/49b29a55-0895-4335-b86e-1f66df6647df" />
+
+
 
 
 # ✨ Funcionalidades
@@ -143,10 +147,7 @@ Tailwind CSS – estilização ágil e responsiva
 
 ---
 
+# 📄 Licença
 
-
-
-
----
-
-🌐 Projeto Open Source
+Projeto open-source sob licença MIT.
+Sinta-se livre para usar, adaptar e contribuir.
